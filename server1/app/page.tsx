@@ -9,7 +9,7 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://54.82.98.11/api/data');
+      const response = await fetch('https://35.95.134.54/api/data');
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -24,7 +24,7 @@ export default function Home() {
 
   const sendPostData = async () => {
     try {
-      const response = await fetch('https://54.82.98.11/api/data', {
+      const response = await fetch('https://35.95.134.54/api/data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export default function Home() {
 
   const updateData = async () => {
     try {
-      const response = await fetch('https://54.82.98.11/api/data', {
+      const response = await fetch('https://35.95.134.54/api/data', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function Home() {
 
   const deleteData = async () => {
     try {
-      const response = await fetch('https://54.82.98.11/api/delete', {
+      const response = await fetch('https://35.95.134.54/api/delete', {
         method: 'DELETE',
       });
       if (!response.ok) {
