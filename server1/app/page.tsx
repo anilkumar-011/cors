@@ -9,7 +9,10 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://35.95.134.54/api/data');
+      const response = await fetch('https://35.95.134.54/api/data',{
+        headers: {
+          'Content-Type': 'application/json',
+        }});
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -28,7 +31,6 @@ export default function Home() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Anil':'Kumar',
         },
         body: JSON.stringify({ message: postData }),
       });
@@ -73,6 +75,9 @@ export default function Home() {
     try {
       const response = await fetch('https://35.95.134.54/api/delete', {
         method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
